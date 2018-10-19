@@ -26,7 +26,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(resp['answer'], -2, 'Multiply endpoint failed known answer 7-5 = -2')
 
     def test_uppercase(self):
-        response = self.app.get('/touppercase?s=xomnia')
+        response = self.app.get('/to_uppercase?s=xomnia')
         self.assertEqual(response, 'XOMNIA', 'failed, no uppercase letters in response')
 
 
