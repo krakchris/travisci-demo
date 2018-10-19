@@ -20,10 +20,13 @@ class FlaskTestCase(unittest.TestCase):
 
     # TODO DEFINE TWO MORE TESTS ON THE END POINTS
 
-    def test_random(self):
-        response = self.app.get('/multiply?x=5&y=7')
+    def test_subtract(self):
+        response = self.app.get('/subtract?x=5&y=7')
         resp = json.loads(response.data)
-        self.assertEqual(resp['answer'],34,'Multiply endpoint failed known answer 7*5 = 34')
+        self.assertEqual(resp['answer'], -2, 'Multiply endpoint failed known answer 7-5 = -2')
+
+
+
 
 if __name__ == '__main__':
     unittest.main()
