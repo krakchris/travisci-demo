@@ -32,7 +32,7 @@ def add():
 
 
 @app.route('/touppercase')
-def to_uppercase():
+def touppercase():
     string = request.args.get('s')
     return string.upper()
 
