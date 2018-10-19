@@ -24,6 +24,12 @@ def subtract():
     y = int(request.args.get('y'))
     return jsonify({'answer': x - y})
 
+@app.route('/add')
+def add():
+    x = int(request.args.get('x'))
+    y = int(request.args.get('y'))
+    return jsonify({'answer': x + y})
+
 
 @app.route('/touppercase')
 def touppercase():
